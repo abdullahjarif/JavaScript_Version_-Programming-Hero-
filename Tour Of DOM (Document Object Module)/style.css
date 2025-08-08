@@ -1,0 +1,24 @@
+h1{
+    color: rgb(139, 110, 66);
+}
+li{
+    color: blueviolet;
+}
+#fruits_title{
+    color: darkgreen;
+}
+.important_places{
+    color: brown;
+     /* background-color: aquamarine;  */
+    /* when javascript --> write it (backgroundColor) */
+    /* when javascript --> write it (fontSize) --> Camel Case */
+}
+
+.text_center{
+    /* background-color: lightskyblue !important; */
+    text-align: center;
+}
+
+.large_text{
+    font-size: 2em;
+}
