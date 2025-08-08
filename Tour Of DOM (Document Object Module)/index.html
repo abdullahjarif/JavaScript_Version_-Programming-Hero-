@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!--  DOM (Document Object Model) -->
+    <header>
+        <h1>Welcome to DOM</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste eveniet in cum ipsam illum. Quas saepe, sunt aut nam quaerat, ad odit cum inventore iure, fugiat dolorem deleniti. Expedita, delectus.</p>
+    </header>
+
+    <main id="main_container">
+        <section>
+            <h1>Welcome to Book Shop</h1>
+            <ul>
+                <li>Story books</li>
+                <li>Horror books</li>
+                <li>Poem</li>
+                <li>Literature</li>
+                <li>Song books</li>
+            </ul>
+
+        </section>
+    
+    <section class="fruits_container">
+        <h1 id="fruits_title" class="fruits_class">Fruits I like</h1>
+        <ul>
+            <li>Banana</li>
+            <li>Apple</li>
+            <li>Mango</li>
+            <li>Guava</li>
+        </ul>
+    </section>
+
+    <section id="places_container">
+        <h1 id="place_title" class="large_text">Places visit to I like</h1>
+        <ul id="places_list">
+            <li class="important_places">Cumilla</li>
+            <li class="important_places">Bandarban</li>
+            <li class="important_places">Sylhet</li>
+            <li class="important_places">Cox's Bazar</li>
+        </ul>
+    </section>
+    </main>
+
+    <script src="./script/dom.js"></script>
+    <script src="./script/append.js"></script>
+    <script src="./script/styleInJS.js"></script>
+
+    <!-- <script>
+        const student = {
+            name: "Jarif",
+            ID: 1234,
+            class: 5,
+            study: function(time){
+                console.log(time, 'hr study korteche')
+            }
+        }
+    </script> -->
+
+    <script>
+        // Option-01: getElementsByTagName()
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection)
+        for(const li of liCollection){
+            // console.log(li);
+            // console.log(li.innerText);
+        }
+        
+        const allheadings = document.getElementsByTagName('h1'); // getElementsByTagName() --> tag name er jonno
+        for(const headings of allheadings){
+            // console.log(headings);
+            // console.log(headings.innerText);
+        }
+        
+        // Option-02: getElementById()
+        const fruitsTitle = document.getElementById('fruits_title');
+        fruitsTitle.innerText = 'Fruits Title is changed by JS';
+        
+        // Option-03: getElementsByClassName()
+        const places = document.getElementsByClassName('important_places'); // getElementsByClassName() --> class er jonno
+        for(const place of places){
+            
+            // console.log(place.innerText);
+        }
+        
+        // Option-04: querySelectorAll()
+        const lists = document.querySelectorAll('.fruits_container li');
+        for(const list of lists){
+            // console.log(list.innerText);
+        }
+        // Option-05: querySelector()
+        const lists1 = document.querySelector('.fruits_container li');
+        for(const list1 of lists){
+            // console.log(list1);
+        }
+    </script>
+</body>
+</html>
